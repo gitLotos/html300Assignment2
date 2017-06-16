@@ -21,6 +21,11 @@ function AddTask()
 
 function UpdateList()
   {
+
+    var CountB = 0;
+    var CountS = 0;
+    var CountG = 0;
+
     var mylist = document.getElementById("tasklist");
     mylist.innerHTML = "";
     for (var i = 0, length = tasks.length; i < length; i++)
@@ -30,5 +35,21 @@ function UpdateList()
         " <br>Owner: " + tasks[i].taskowner +
         " <br> Difficulty: " + tasks[i].taskdifficulty;
         mylist.appendChild(item);
+
+        switch(tasks[i].taskowner)
+          {
+            case 'Brian':
+                CountB++;
+                break;
+            case 'Steve':
+                CountS++;
+                break;
+            case 'Guillermo':
+                CountG++;
+                break;
+            case '':
+                break;
+          }
       }
+      drawChart('Brian', 'Steve', 'Guillermo', CountB, CountS, CountG);
   }
