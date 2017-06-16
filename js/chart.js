@@ -1,6 +1,6 @@
 google.charts.load('current', {'packages':['corechart']});
 
-function drawChart(NameA, NameB, NameC, CountA, CountB, CountC) {
+function drawChart(NameA, NameB, NameC, CountA, CountB, CountC, CountU) {
 
   // Create the data table.
   var data = new google.visualization.DataTable();
@@ -9,7 +9,8 @@ function drawChart(NameA, NameB, NameC, CountA, CountB, CountC) {
   data.addRows([
     [NameA, CountA],
     [NameB, CountB],
-    [NameC, CountC]
+    [NameC, CountC],
+    ['Unassigned', CountU]
   ]);
 
   // Set chart options

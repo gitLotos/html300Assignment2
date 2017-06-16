@@ -8,7 +8,6 @@ function task(description, owner, difficulty)
 
 function AddTask()
   {
-
     var desc = document.getElementById('description').value;
     form = document.getElementById('mainform');
     var person = form.elements["person"].value;
@@ -21,10 +20,10 @@ function AddTask()
 
 function UpdateList()
   {
-
     var CountB = 0;
     var CountS = 0;
     var CountG = 0;
+    var CountU = 0;
 
     var mylist = document.getElementById("tasklist");
     mylist.innerHTML = "";
@@ -48,8 +47,9 @@ function UpdateList()
                 CountG++;
                 break;
             case '':
+                CountU++;
                 break;
           }
       }
-      drawChart('Brian', 'Steve', 'Guillermo', CountB, CountS, CountG);
+      drawChart('Brian', 'Steve', 'Guillermo', CountB, CountS, CountG, CountU);
   }
