@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Assignment 1</title>
+    <script src="js/js.js"></script>
+  </head>
+  <body>
+    <main>
+      <article>
+        <form id="mainform" onsubmit="AddTask(); return false;">
+
+          <textarea id="description" rows="5" cols="35" placeholder="Enter Description"></textarea>
+          <br>
+
+          <p>Assigned To</p>
+          <input type="radio" name="person" value="Brian"> Brian
+          <input type="radio" name="person" value="Steve"> Steve
+          <input type="radio" name="person" value="Guillermo"> Guillermo
+
+          <p>Select Difficulty</p>
+          <select id="difficulty">
+            <option value="Easy">Easy</option>
+            <option value="Medium">Medium</option>
+            <option value="Hard">Hard</option>
+          </select>
+
+          <p>Click to add</p>
+          <input type="submit" name="Submit" value="Add Task">
+        </form>
+      </article>
+
+      <aside>
+        <ul id="tasklist"></ul>
+      </aside>
+    </main>
+  </body>
+</html>
